@@ -1,1 +1,2 @@
-# easyg
+# easyg 
+Pontus, Filip, Alfons
