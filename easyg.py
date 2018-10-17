@@ -1,4 +1,4 @@
-import random
+import random, getpass
 
 meny = 0 
 
@@ -56,5 +56,51 @@ while meny != 3:
                     print(int(spelarepoäng2))
     elif meny == 2:
         print("Du har valt att spela mot en Spelare.")
+        spelare1 = 0
+        spelare2 = 0
+        spelarepoäng1 = 0
+        spelarepoäng2 = 0
+        print("Du har valt att spela mot en PC.")
+        while spelarepoäng1 != 2:
+            if spelarepoäng2 == 2:
+                break
+            spelare1 = int(getpass.getpass(" Spelare ett tryck 1 för att välja sten.\n Spelare ett tryck 2 för att välja sax.\n Spelare ett tryck 3 för att välja påse."))
+            spelare2 = int(getpass.getpass("Spelare två tryck 1 för att välja sten.\n Spelare två tryck 2 för att välja sax.\n Spelare två tryck 3 för att välja påse."))
+            if spelare1 == spelare2: 
+                print("Ni valde lika, försök igen.")
+            elif spelare1 == 1:
+                if spelare2 == 2:
+                    print("Spelare ett har vunnit!")
+                    spelarepoäng1 = spelarepoäng1 + 1
+                    print(int(spelarepoäng1))
+                    print(int(spelarepoäng2))
+                elif spelare2 == 3:
+                    print("Spelare två har vunnit!") 
+                    spelarepoäng2 = spelarepoäng2 + 1
+                    print(int(spelarepoäng1))
+                    print(int(spelarepoäng2))
+            elif spelare1 == 2:
+                if spelare2 == 3:
+                    print("Spelare två har vunnit!")
+                    spelarepoäng1 = spelarepoäng1 + 1
+                    print(int(spelarepoäng1))
+                    print(int(spelarepoäng2))
+                elif spelare2 == 1:
+                    print("Spelare ett har vunnit!") 
+                    spelarepoäng2 = spelarepoäng2 + 1
+                    print(int(spelarepoäng1))
+                    print(int(spelarepoäng2))
+            elif spelare1 == 3:
+                if spelare2 == 1:
+                    print("Spelare ett har vunnit!")
+                    spelarepoäng1 = spelarepoäng1 + 1
+                    print(int(spelarepoäng1))
+                    print(int(spelarepoäng2))
+                elif spelare2 == 2:
+                    print("Spelare två har förlorat!") 
+                    spelarepoäng2 = spelarepoäng2 + 1
+                    print(int(spelarepoäng1))
+                    print(int(spelarepoäng2))
+
     elif meny == 3:
         print("Avsluta")
