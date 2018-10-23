@@ -105,4 +105,4 @@ while meny != 3: # S책 l채nge v채rdet ej 채r 3, s책 kommer den att loopa (forts�
                     print(int(spelarepo채ng2))
 
     elif meny == 3:
-        print("Avsluta.")
+        print("Avslutat.")
