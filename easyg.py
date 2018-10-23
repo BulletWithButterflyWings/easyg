@@ -1,14 +1,14 @@
-import random, getpass
+import random, getpass # Lägger till module till programet.
 
-meny = 0 
+meny = 0 #Tilldelar (variabeln) "meny" värdet 0. = 
 
 
 print("Välkommen!")
-while meny != 3: 
+while meny != 3: # Så länge värdet ej är 3.
     print("Tryck 1 för PC.\n Tryck 2 för två spelare.\n Tryck 3 för att avsluta.\n")
-    meny = int(input("PC eller två spelare?")) 
+    meny = int(input("PC eller två spelare?")) #
 
-    if meny == 1:
+    if meny == 1: #
         rundor = int(input("Välj antal rundor för att vinna: "))
         spelare1 = 0
         spelare2 = 0
